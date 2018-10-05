@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="700dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+
+            android:background="@color/laybareGreen">
+
+            <TextView
+                android:id="@+id/lbldialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Dialog Sample"
+                android:textColor="@color/themeWhite"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progresBar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/brownLoading"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:id="@+id/lbldialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_margin="18dp"
+                android:text="Branch is closed at this time. Shutting down in "
+                android:textColor="@color/brownLoading"
+                android:textSize="25sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/btnLaybareGreen"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Shutwdown Kiosk"
+            android:textSize="21sp" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

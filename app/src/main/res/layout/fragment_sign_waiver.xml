@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/laybareBackgroundColor">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <Button
+                    android:id="@+id/btnPrev"
+                    style="@style/btnLaybareBrown"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.45"
+                    android:drawableLeft="@drawable/arrow_left"
+                    android:drawableTint="@color/themeWhite"
+                    android:text="Back"
+                    android:textColor="@color/themeWhite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:textColor="@color/laybareGreen"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/btnLaybareGreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.45"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:drawableTint="@color/themeWhite"
+                    android:text="Finish"
+
+                    android:textColor="@color/themeWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblAgreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginRight="150dp"
+                            android:gravity="left"
+                            android:text="as"
+                            android:textColor="@color/brownLoading"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+
+                        <CheckBox
+                            android:id="@+id/checkAgree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/brownLoading"
+                            android:drawableTint="@color/laybareGreen"
+                            android:gravity="left"
+                            android:text="I agree to the terms and condition"
+                            android:textColor="@color/brownLoading"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.6"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1.0">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginLeft="150dp"
+                                android:layout_marginRight="150dp"
+                                android:layout_weight="0.2"
+                                android:gravity="left"
+                                android:text="Client Signature"
+                                android:textColor="@color/brownLoading"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnClearPad"
+                                style="@style/btnLaybareRed"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_weight="0.80"
+                                android:text="Clear"
+                                android:textColor="@color/themeWhite"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true">
+
+                                <com.williamww.silkysignature.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/signaturePad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="300dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="5dp"
+                                    app:penColor="@android:color/black" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/signaturePad"
+                                    android:layout_marginTop="-60dp"
+                                    android:id="@+id/linear"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/lblName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/signature_pad"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/brownLoading"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <View
+                                        android:id="@+id/viewLine"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_below="@+id/lblName"
+                                        android:layout_marginLeft="80dp"
+                                        android:layout_marginRight="80dp"
+                                        android:background="@color/brownLoading" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/viewLine"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:gravity="center"
+                                        android:text="Signed over printed name"
+                                        android:textColor="@color/brownLoading"
+                                        android:textSize="16sp"
+                                        android:textStyle="italic" />
+
+
+
+
+                                </LinearLayout>
+
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

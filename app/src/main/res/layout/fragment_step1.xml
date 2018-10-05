@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain_question"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/laybareBackgroundColor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="5dp"
+            android:background="@color/themeLightGray"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/themeLightGray"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:weightSum="1.0">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/laybareGreen"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <Button
+                            android:id="@+id/btnPrev"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.35"
+                            android:background="@color/brownLoading"
+                            android:drawableLeft="@drawable/arrow_left"
+                            android:drawableTint="@color/themeWhite"
+                            android:gravity="center_vertical|left"
+                            android:text="Cancel"
+                            android:textColor="@color/themeWhite"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_weight="0.3"
+                            android:background="@color/laybareGreen"
+                            android:gravity="center"
+                            android:text="All Items"
+                            android:textColor="@color/themeWhite"
+                            android:textSize="25sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_weight="0.35"
+                            android:gravity="right|center_vertical"
+                            android:text="Select"
+                            android:textColor="@color/themeWhite" />
+
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/laybareGreen"
+                        android:elevation="5dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:tabGravity="center"
+                        app:tabIndicatorColor="@color/themeWhite"
+                        app:tabIndicatorHeight="5dp"
+                        app:tabMode="fixed" />
+
+
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPagerDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/themeLightGray"
+                    android:layout_margin="5dp">
+
+                </android.support.v4.view.ViewPager>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/linearCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/laybareGreen"
+                        android:gravity="center"
+                        android:text="My Order(s)"
+                        android:textColor="@color/themeWhite"
+                        android:textSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/themeLightGray"
+                        android:weightSum="1.0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="1.0">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerItems"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="0.25"
+                                android:scrollbars="vertical"
+                                android:visibility="visible">
+
+                            </android.support.v7.widget.RecyclerView>
+
+                            <RelativeLayout
+                                android:id="@+id/linearSummary"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_below="@+id/linearCart"
+                                android:layout_weight="0.75"
+                                android:elevation="10dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="1.0">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_above="@+id/linearButton"
+                                        android:layout_weight="0.5"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1.0">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.5"
+                                                android:alpha="0.5"
+                                                android:background="@color/themeBlack"
+                                                android:orientation="vertical"
+                                                android:weightSum="1.0">
+
+                                                <TextView
+                                                    android:id="@+id/lblTotalQty"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:padding="5dp"
+                                                    android:text="0"
+                                                    android:textColor="@color/themeWhite"
+                                                    android:textSize="25sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:text="NUMBER OF ITEMS"
+                                                    android:textColor="@color/themeWhite"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="italic" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.5"
+                                                android:alpha="0.5"
+                                                android:background="@color/themeBlack"
+                                                android:orientation="vertical"
+                                                android:weightSum="1.0">
+
+                                                <TextView
+                                                    android:id="@+id/lblTotalPrice"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:text="₱ 0.00"
+                                                    android:textColor="@color/themeWhite"
+                                                    android:textSize="25sp"
+                                                    android:textStyle="bold" />
+
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:text="TOTAL PRICE"
+                                                    android:textColor="@color/themeWhite"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="italic" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/linearButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_weight="0.5"
+                                        android:orientation="horizontal">
+
+                                        <Button
+                                            android:id="@+id/btnNext"
+                                            style="@style/btnLaybareGreen"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="0.5"
+                                            android:drawableRight="@drawable/arrow_right"
+                                            android:drawableTint="@color/themeWhite"
+                                            android:gravity="center"
+                                            android:text="PROCEED TO WAIVER SIGNING"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                            android:textColor="@color/themeWhite"
+                                            android:textSize="20sp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/lblTransactionDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No item(s) to display"
+                    android:textColor="@color/brownLoading"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

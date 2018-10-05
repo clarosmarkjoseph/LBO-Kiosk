@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="themeGray">#8a9199</color>
+    <color name="themeLightGray">#eaeaea</color>
+    <color name="themeDarkGray">#ff3f434b</color>
+    <color name="themeRed">#ffCC292B</color>
+    <color name="themeBlack">#000000</color>
+    <color name="themeBlue">#ff002E63</color>
+    <color name="themeWhite">#ffffffff</color>
+    <color name="buttonNormal">@color/themeGray</color>
+    <color name="buttonPressed">@color/themeBlue</color>
+    <color name="brownLoading">#774101</color>
+    <color name="btn">#80b141</color>
+    <color name="transparent">#00000000</color>
+    <color name="laybareGreen">#92c740</color>
+    <color name="laybareGreenLight">#abd973</color>
+    <color name="laybareHeaderColor">#f8ffc0</color>
+    <color name="laybareBackgroundColor">#e8fec7</color>
+    <color name="laybareTextColor">#666</color>
+    <color name="laybareTextColorInBackground">#8e9daa</color>
+    <color name="laybareInfo">#5bc0de</color>
+    <color name="blueMale">#003366</color>
+    <color name="pinkFemale">#f49cf1</color>
+    <color name="btnRed">#E25049</color>
+    <color name="facebookBlue">#3B5998</color>
+    <color name="laybareWarning">#ffbe00</color>
+
+
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+
+            android:background="@color/laybareGreen">
+
+            <TextView
+                android:id="@+id/lbldialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Dialog Sample"
+                android:textColor="@color/themeWhite"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_dialog_close"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/a_close"
+                android:tint="@color/themeWhite"
+
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbldialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Dialog Sample"
+                android:textColor="@color/brownLoading"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:id="@+id/linearPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/txtUserPassword"
+                    style="@style/txtTextBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:focusable="true"
+
+                    android:focusableInTouchMode="true"
+                    android:hint="Enter password"
+
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:nextFocusRight="@+id/txtLastName" />
+
+                <TextView
+                    android:layout_width="600dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="left"
+
+                    android:layout_margin="10dp"
+                    android:text="PS: this is for adminstrator only"
+                    android:textColor="@color/brownLoading"
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <Button
+                    android:id="@+id/btndialog_cancel"
+                    style="@style/btnLaybareRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_margin="20dp"
+                    android:layout_weight="0.5"
+                    android:text="Cancel"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btndialog_confirm"
+                    style="@style/btnLaybareGreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+
+                    android:text="Confirm" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

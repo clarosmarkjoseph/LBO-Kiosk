@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btnPrev"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:background="@color/brownLoading"
+                android:drawableLeft="@drawable/arrow_left"
+                android:drawableTint="@color/themeWhite"
+                android:text="Back"
+                android:elevation="5dp"
+                android:drawablePadding="0dp"
+                android:textColor="@color/themeWhite" />
+
+            <EditText
+                android:id="@+id/txtSearchFirstName"
+                style="@style/txtTextBox"
+                android:layout_width="500dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:hint="First Name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:nextFocusRight="@+id/txtLastName" />
+
+            <EditText
+                android:id="@+id/txtSearchLastName"
+                style="@style/txtTextBox"
+                android:layout_width="500dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:hint="Last Name"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:nextFocusRight="@+id/txtLastName" />
+
+            <LinearLayout
+                android:layout_width="500dp"
+                android:layout_height="56dp"
+                style="@style/txtTextBox"
+                android:layout_margin="20dp"
+                android:layout_gravity="center">
+
+                <Spinner
+                    android:id="@+id/spinner_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtSearchEmail"
+                style="@style/txtTextBox"
+                android:layout_width="500dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:hint="Email Address: "
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txtSearchBday"
+                style="@style/txtTextBox"
+                android:layout_width="500dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Enter your Birthdate"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linearContact"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1.0">
+
+                <EditText
+                    style="@style/txtTextBox"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:text="+63" />
+
+                <EditText
+                    android:id="@+id/txtSearchContact"
+                    style="@style/txtTextBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:maxLength="10"
+                    android:hint="ex: 9123456789"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxEms="10" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSearchClient"
+                style="@style/btnLaybareGreen"
+                android:layout_width="500dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:alpha="0.5"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Search Record" />
+
+            <Button
+                android:id="@+id/btnFillUp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="First time in Lay Bare? Click Here"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/brownLoading"
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

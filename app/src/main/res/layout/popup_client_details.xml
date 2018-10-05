@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="1100dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/laybareGreen"
+
+            >
+
+            <TextView
+                android:id="@+id/lbldialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Is this you?"
+                android:textColor="@color/themeWhite"
+                android:textSize="35sp" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_dialog_close"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/a_close"
+                android:tint="@color/themeWhite"
+
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_gravity="top"
+                            android:layout_weight="0.7" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.3"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/lblClientName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="left"
+                                android:textColor="@color/brownLoading"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.7"
+                                    android:text="Account ID: "
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/lblClientID"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|left"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.3"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.7"
+                                    android:text="Gender"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/lblClientGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.3"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.7"
+                                    android:text="Birth Date"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+
+                                <TextView
+                                    android:id="@+id/lblClientBday"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.3"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.7"
+                                    android:text="Contact No: "
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+
+                                <TextView
+                                    android:id="@+id/lblClientContact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.3"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.7"
+                                    android:text="Email Address: "
+                                    android:textStyle="bold"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+
+                                <TextView
+                                    android:id="@+id/lblClientEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:layout_weight="0.3"
+                                    android:textColor="@color/brownLoading"
+                                    android:textSize="19sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <Button
+                            android:id="@+id/btndialog_cancel"
+                            style="@style/btnLaybareRed"
+                            android:layout_width="400dp"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_margin="20dp"
+                            android:layout_weight="0.5"
+                            android:text="Cancel"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btndialog_confirm"
+                            style="@style/btnLaybareGreen"
+                            android:layout_width="400dp"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Confirm" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLoading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="1.0">
+
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:indeterminateTint="@color/brownLoading"
+                            android:theme="@style/greenLoading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="loading in "
+                            android:textColor="@color/brownLoading"
+                            android:textSize="19sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/lblSeconds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5...."
+                            android:textColor="@color/brownLoading"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

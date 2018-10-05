@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/laybareInfo">
+
+            <TextView
+                android:id="@+id/lblWaiverTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Waiver Question"
+                android:textColor="@color/themeWhite"
+                android:textSize="25sp" />
+
+            <ImageButton
+                android:id="@+id/imgBtnClose"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/a_close"
+                android:tint="@color/themeWhite"
+
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblWaiverQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Dialog Sample"
+                android:textColor="@color/brownLoading"
+                android:textSize="21sp" />
+
+
+            <EditText
+                android:id="@+id/txtAnswer"
+                style="@style/txtTextBox"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint=""
+                android:imeOptions="actionGo"
+                android:inputType="textCapWords"
+                android:nextFocusRight="@+id/txtLastName" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="@style/btnLaybareRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textColor="@color/themeWhite"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/btnLaybareInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Confirm"
+                    android:textColor="@color/themeWhite"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
