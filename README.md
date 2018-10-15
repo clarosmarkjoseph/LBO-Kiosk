@@ -1,2 +1,2 @@
-# LayBare-Kiosk
-This is the official Branch Kiosk of Lay Bare
+# LBO-Kiosk
+This is the official Branch Kiosk of LBO
